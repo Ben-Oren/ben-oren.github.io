@@ -22,9 +22,7 @@ import matplotlib
 plt.plot([1,2,3,4]);
 ```
 
-
-![svg](output_3_0.svg)
-
+![Image test]({{ site.url }}/images/AlanLeeShireGandalf.JPG)
 
 **BOOM**
 
