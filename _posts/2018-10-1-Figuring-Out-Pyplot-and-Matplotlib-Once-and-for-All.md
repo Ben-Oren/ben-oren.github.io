@@ -57,7 +57,7 @@ plt.plot([1,2,3,4], [1,4,9,16], 'ro');
 ```
 
 
-![png](output_6_0.png)
+![svg](output_6_0.svg)
 
 
 
@@ -68,7 +68,7 @@ plt.ylim( (0,20) );
 ```
 
 
-![png](output_7_0.png)
+![svg](output_7_0.svg)
 
 
 ##### Data
@@ -111,7 +111,7 @@ plt.plot(d, d, 'bo', d, d**1.5, 'r^', d, np.log(d), 'gs');
 
 
 
-![png](output_10_1.png)
+![svg](output_10_1.svg)
 
 
 Seems like we're getting closer to a syntax that might be regularly useful for at least scratchpad work, right? 
@@ -133,7 +133,7 @@ x,y,z = plt.plot(d, d, 'bo', d, d**1.5, 'r^', d, np.log(d), 'gs')
 
 
 
-![png](output_14_1.png)
+![svg](output_14_1.svg)
 
 
 
@@ -144,7 +144,7 @@ x
 
 
 
-    <matplotlib.lines.Line2D at 0x11e57e470>
+    <matplotlib.lines.Line2D at 0x11f6e6668>
 
 
 
@@ -156,7 +156,7 @@ y
 
 
 
-    <matplotlib.lines.Line2D at 0x11e19c0f0>
+    <matplotlib.lines.Line2D at 0x11f6e6550>
 
 
 
@@ -168,7 +168,7 @@ z
 
 
 
-    <matplotlib.lines.Line2D at 0x11e19ca90>
+    <matplotlib.lines.Line2D at 0x11e37ce80>
 
 
 
@@ -192,7 +192,7 @@ plt.setp(x, color = 'm');
 
 
 
-![png](output_19_1.png)
+![svg](output_19_1.svg)
 
 
 So we can change the properties of a line with plt.setp(specific line, specific property to change)
@@ -212,7 +212,7 @@ print(ax);
 
 
 
-![png](output_21_1.png)
+![svg](output_21_1.svg)
 
 
 ___oh noooooo___
@@ -248,7 +248,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--');
 ```
 
 
-![png](output_26_0.png)
+![svg](output_26_0.svg)
 
 
 > The bits before the plt calls should be straightforward to interpret: 
@@ -264,7 +264,7 @@ x;
 ```
 
 
-    <matplotlib.figure.Figure at 0x11e385ef0>
+    <matplotlib.figure.Figure at 0x11f3cd278>
 
 
 and stored in memory as the 'location' of the graphic.
@@ -293,7 +293,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--');
 ```
 
 
-![png](output_33_0.png)
+![svg](output_33_0.svg)
 
 
 Get it?
@@ -304,7 +304,7 @@ We can manipulate the `plt.figure` instance to increase the size in which the pl
 
 
 ```python
-plt.figure(1, figsize = (12.2, 8))
+plt.figure(2, figsize = (12.2, 8))
 
 plt.subplot(121)
 plt.plot(t1, f(t1), 'bo', t2, f(t2), 'g')
@@ -395,7 +395,7 @@ ax[0].set_title('Calibrated Scale of My Work Ethic When Starting a Project')
 ax[1].plot(t2, np.cos(2*np.pi*t2), 'r--')
 ax[1].set_xlabel('Hours after starting a project')
 ax[1].set_ylabel('Normalized hunger units')
-ax[1].set_title('My Hunger When Starting a Project');
+ax[1].set_title('Calibrated Scale of My Hunger When Starting a Project');
 ```
 
 
