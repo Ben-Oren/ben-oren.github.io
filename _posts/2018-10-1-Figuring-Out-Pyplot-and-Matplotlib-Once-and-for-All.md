@@ -108,8 +108,7 @@ plt.plot(d, d, 'bo', d, d**1.5, 'r^', d, np.log(d), 'gs');
 
 
 
-![Fourth graph]({{ site.url }}/images/output_10_1.svg)
-
+![Fourth graph]({{ site.url }}/images/output_14_1.svg)
 
 Seems like we're getting closer to a syntax that might be regularly useful for at least scratchpad work, right? 
 
