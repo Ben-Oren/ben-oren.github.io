@@ -363,7 +363,7 @@ fig, ax = plt.subplots(1, 2, figsize = (12, 8))
 
 xlabel = 'Hours after starting a project'
 ylabel = 'Normalized {} units'
-g_title = 'My {} When Starting a Project'
+g_title = 'Calibrated Scale of My {} When Starting a Project'
 words = ['work ethic', 'hunger']
 
 ax[0].plot(t1, f(t1), 'bo', t2, f(t2), 'g')
