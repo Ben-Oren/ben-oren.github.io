@@ -22,7 +22,7 @@ import matplotlib
 plt.plot([1,2,3,4]);
 ```
 
-![First graph]({{ site.url }}/images/output_0_3.svg)
+![First graph]({{ site.url }}/images/output_3_0.svg)
 
 **BOOM**
 
@@ -42,7 +42,7 @@ But let's break it down a bit.
 - And already there's a "th' hell?" moment: we're only feeding one list of data into pyplot (the y values), and it's automatically providing x values to pair with the y values, but the x values go from 0:3 while our list was from 1:4 . . . ugh.
 >What's going on is that, if you feed a single sequence of values to pyplot, it treats it as y values and automatically assigns x values to graph it.  So far so good, but why do the x-values start at 0?
 
-   >Beacuse, recall, python ranges start at 0.
+>Beacuse, recall, python ranges start at 0.
 
 ---
 ---
@@ -75,7 +75,7 @@ plt.ylim( (0,20) );
    
 + But notice that, of course, there's a reverse of how it treats a single series of data: the series in the first position is now the **x-values**, and the second series is the **y-values**
 
-###### Colors / Shapes
+##### Colors / Shapes
 + Notice also there's some weird parameter after the series in py.plot  
   + This is the first of many delightful quirks about matplotplib that are due to its origin.  
   + It was designed to mimic the graphing capabilities of Matlab, and originally imported a lot of Matlab's graphing syntax.  
@@ -104,12 +104,9 @@ d = np.arange(0, 10, .5)
 plt.plot(d, d, 'bo', d, d**1.5, 'r^', d, np.log(d), 'gs');
 ```
 
-    /anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:4: RuntimeWarning: divide by zero encountered in log
-      after removing the cwd from sys.path.
 
 
-
-![svg](output_10_1.svg)
+![Third graph]({{ site.url }}/images/output_10_1.svg)
 
 
 Seems like we're getting closer to a syntax that might be regularly useful for at least scratchpad work, right? 
@@ -126,12 +123,11 @@ Let's use this graph to see what pyplot is doing 'under the hood'
 x,y,z = plt.plot(d, d, 'bo', d, d**1.5, 'r^', d, np.log(d), 'gs')
 ```
 
-    /anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:1: RuntimeWarning: divide by zero encountered in log
-      """Entry point for launching an IPython kernel.
 
 
 
-![svg](output_14_1.svg)
+
+![Third graph]({{ site.url }}/images/output_14_1.svg)
 
 
 
@@ -185,12 +181,8 @@ x,y,z = plt.plot(d, d, 'bo', d, d**1.5, 'r^', d, np.log(d), 'gs')
 plt.setp(x, color = 'm');
 ```
 
-    /anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:1: RuntimeWarning: divide by zero encountered in log
-      """Entry point for launching an IPython kernel.
 
-
-
-![svg](output_19_1.svg)
+![Third graph]({{ site.url }}/images/output_19_1.svg)
 
 
 So we can change the properties of a line with plt.setp(specific line, specific property to change)
@@ -210,7 +202,7 @@ print(ax);
 
 
 
-![svg](output_21_1.svg)
+![Third graph]({{ site.url }}/images/output_21_1.svg)
 
 
 ___oh noooooo___
@@ -291,7 +283,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--');
 ```
 
 
-![svg](output_33_0.svg)
+![Third graph]({{ site.url }}/images/output_33_0.svg)
 
 
 Get it?
@@ -312,7 +304,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--');
 ```
 
 
-![svg](output_36_0.svg)
+![Third graph]({{ site.url }}/images/output_36_0.svg)
 
 
 ahhh, nothing like stretching out
@@ -329,7 +321,7 @@ fig, ax = plt.subplots(1, 2, figsize=(10, 4))
 ```
 
 
-![svg](output_40_0.svg)
+![Third graph]({{ site.url }}/images/output_40_0.svg)
 
 
 THAT'S RIGHT PEEPS 
@@ -355,7 +347,7 @@ for graphic in [0,1]:
 ```
 
 
-![svg](output_42_0.svg)
+![Third graph]({{ site.url }}/images/output_42_0.svg)
 
 
 dynamic.
@@ -370,7 +362,7 @@ Can't have everything
 
 ## Labels, axes values, adding text / graphics
 
-I'll end my current exploration by adding labels, a title, and some text to the graphs above.  The syntax is all pretty straight-forward.  
+I'll end my current exploration by adding labels, a title, and some text to the graphs above.  The syntax is all pretty straight-forward. (Notice you can also dynamically program plot attritubes like titles or labels).
 
 Happy plotting, and stay safe out there
 
@@ -381,21 +373,25 @@ t2 = np.arange(0.0, 5.0, 0.02)
 
 fig, ax = plt.subplots(1, 2, figsize = (12, 8))
 
+xlabel = 'Hours after starting a project'
+ylabel = 'Normalized {} units'
+g_title = 'My {} When Starting a Project'
+words = ['work ethic', 'hunger']
 
 ax[0].plot(t1, f(t1), 'bo', t2, f(t2), 'g')
+ax[1].plot(t2, np.cos(2*np.pi*t2), 'r--')
+
+
 ax[0].annotate('local max', xy=(1, .4), xytext=(1.5, .5),
             arrowprops=dict(facecolor='red', shrink=0.05),
             )
-ax[0].set_xlabel('Hours after starting a project')
-ax[0].set_ylabel('Normalized work ethic units')
-ax[0].set_title('Calibrated Scale of My Work Ethic When Starting a Project')
 
-ax[1].plot(t2, np.cos(2*np.pi*t2), 'r--')
-ax[1].set_xlabel('Hours after starting a project')
-ax[1].set_ylabel('Normalized hunger units')
-ax[1].set_title('Calibrated Scale of My Hunger When Starting a Project');
+for graph in [0,1]:
+   ax[graph].set_xlabel(xlabel)
+   ax[graph].set_ylabel(ylabel.format(words[graph])
+   ax[graph].set_title(gtitle.format(words[graph].title());
 ```
 
 
-![svg](output_46_0.svg)
+![Third graph]({{ site.url }}/images/output_46_0.svg)
 
