@@ -44,7 +44,6 @@ But let's break it down a bit.
 
 - And already there's a "th' hell?" moment: we're only feeding one list of data into pyplot (the y values), and it's automatically providing x values to pair with the y values, but the x values go from 0:3 while our list was from 1:4 . . . ugh.
 >What's going on is that, if you feed a single sequence of values to pyplot, it treats it as y values and automatically assigns x values to graph it.  So far so good, but why do the x-values start at 0?
-
 >Beacuse, recall, python ranges start at 0.
 
 ---
