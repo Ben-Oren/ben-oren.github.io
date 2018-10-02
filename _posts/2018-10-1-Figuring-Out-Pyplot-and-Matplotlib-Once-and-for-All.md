@@ -377,7 +377,7 @@ ax[0].annotate('local max', xy=(1, .4), xytext=(1.5, .5),
 for graph in [0,1]:
    ax[graph].set_xlabel(xlabel)
    ax[graph].set_ylabel(ylabel.format(words[graph])
-   ax[graph].set_title(gtitle.format(words[graph].title());
+   ax[graph].set_title(g_title.format(words[graph].title());
 ```
 
 
