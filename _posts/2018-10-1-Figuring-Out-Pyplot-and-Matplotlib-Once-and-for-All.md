@@ -22,7 +22,7 @@ import matplotlib
 plt.plot([1,2,3,4]);
 ```
 
-![Image test]({{ site.url }}/images/AlanLeeShireGandalf.JPG)
+![First graph]({{ site.url }}/images/output_0_3.svg)
 
 **BOOM**
 
@@ -55,7 +55,7 @@ plt.plot([1,2,3,4], [1,4,9,16], 'ro');
 ```
 
 
-![svg](output_6_0.svg)
+![Second graph]({{ site.url }}/images/output_6_0.svg)
 
 
 
@@ -66,7 +66,7 @@ plt.ylim( (0,20) );
 ```
 
 
-![svg](output_7_0.svg)
+![Third graph]({{ site.url }}/images/output_7_0.svg)
 
 
 ##### Data
