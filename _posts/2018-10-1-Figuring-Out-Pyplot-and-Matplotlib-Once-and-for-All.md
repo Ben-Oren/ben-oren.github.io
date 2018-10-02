@@ -106,7 +106,7 @@ plt.plot(d, d, 'bo', d, d**1.5, 'r^', d, np.log(d), 'gs');
 
 
 
-![Third graph]({{ site.url }}/images/output_10_1.svg)
+![Fourth graph]({{ site.url }}/images/output_10_1.svg)
 
 
 Seems like we're getting closer to a syntax that might be regularly useful for at least scratchpad work, right? 
@@ -116,7 +116,7 @@ Seems like we're getting closer to a syntax that might be regularly useful for a
 
 ## Pyplot objects
 
-Let's use this graph to see what pyplot is doing 'under the hood'
+Let's use this graph to see what else pyplot is doing
 
 
 ```python
@@ -127,7 +127,7 @@ x,y,z = plt.plot(d, d, 'bo', d, d**1.5, 'r^', d, np.log(d), 'gs')
 
 
 
-![Third graph]({{ site.url }}/images/output_14_1.svg)
+![Fifth graph]({{ site.url }}/images/output_14_1.svg)
 
 
 
@@ -135,11 +135,7 @@ x,y,z = plt.plot(d, d, 'bo', d, d**1.5, 'r^', d, np.log(d), 'gs')
 x
 ```
 
-
-
-
     <matplotlib.lines.Line2D at 0x11f6e6668>
-
 
 
 
@@ -147,11 +143,7 @@ x
 y
 ```
 
-
-
-
     <matplotlib.lines.Line2D at 0x11f6e6550>
-
 
 
 
@@ -159,11 +151,7 @@ y
 z
 ```
 
-
-
-
     <matplotlib.lines.Line2D at 0x11e37ce80>
-
 
 
 Looks like in addition to graphing, plt.plot() also returns objects for each line.
@@ -182,7 +170,7 @@ plt.setp(x, color = 'm');
 ```
 
 
-![Third graph]({{ site.url }}/images/output_19_1.svg)
+![Sixth graph]({{ site.url }}/images/output_19_1.svg)
 
 
 So we can change the properties of a line with plt.setp(specific line, specific property to change)
@@ -202,7 +190,7 @@ print(ax);
 
 
 
-![Third graph]({{ site.url }}/images/output_21_1.svg)
+![Seventh graph]({{ site.url }}/images/output_21_1.svg)
 
 
 ___oh noooooo___
@@ -238,7 +226,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--');
 ```
 
 
-![svg](output_26_0.svg)
+![Eighth graph]({{ site.url }}/images/output_26_0.svg)
 
 
 > The bits before the plt calls should be straightforward to interpret: 
@@ -252,7 +240,6 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--');
 x = plt.figure(1)
 x;
 ```
-
 
     <matplotlib.figure.Figure at 0x11f3cd278>
 
@@ -283,7 +270,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--');
 ```
 
 
-![Third graph]({{ site.url }}/images/output_33_0.svg)
+![Ninth graph]({{ site.url }}/images/output_33_0.svg)
 
 
 Get it?
@@ -304,7 +291,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--');
 ```
 
 
-![Third graph]({{ site.url }}/images/output_36_0.svg)
+![Tenth graph]({{ site.url }}/images/output_36_0.svg)
 
 
 ahhh, nothing like stretching out
@@ -321,7 +308,7 @@ fig, ax = plt.subplots(1, 2, figsize=(10, 4))
 ```
 
 
-![Third graph]({{ site.url }}/images/output_40_0.svg)
+![Eleventh graph]({{ site.url }}/images/output_40_0.svg)
 
 
 THAT'S RIGHT PEEPS 
@@ -347,7 +334,7 @@ for graphic in [0,1]:
 ```
 
 
-![Third graph]({{ site.url }}/images/output_42_0.svg)
+![Twelfth graph]({{ site.url }}/images/output_42_0.svg)
 
 
 dynamic.
@@ -393,5 +380,5 @@ for graph in [0,1]:
 ```
 
 
-![Third graph]({{ site.url }}/images/output_46_0.svg)
+![Thirteenth graph]({{ site.url }}/images/output_46_0.svg)
 
