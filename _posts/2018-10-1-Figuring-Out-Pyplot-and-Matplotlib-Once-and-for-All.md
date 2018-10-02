@@ -38,7 +38,7 @@ But let's break it down a bit.
 - The semicolon at the end of the plt.plot call supresses jn from 'printing' the last line of the cell
 
 
-- Notice that the main library is a subclass of matplotlib called pyplot that we're importing as its own object.
+- Notice that the main library we're using is a subclass of matplotlib called pyplot that we're importing.
 >It's pyplot (which we imported as plt) that acts as the workhorse graphing tool.  IOW: feed data into pyplot to produce a chart.
 
 
