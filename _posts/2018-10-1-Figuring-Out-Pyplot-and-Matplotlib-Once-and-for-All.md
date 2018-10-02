@@ -1,5 +1,5 @@
 
-# Exploring Matplotlib and Pyplot
+## Exploring Matplotlib and Pyplot
 
 I'm in the first week at the [Metis](https://www.thisismetis.com) [datascience bootcamp](https://www.thisismetis.com/data-science-bootcamps). (Feel free to get in touch if you'd like to chat about it.)
 
@@ -30,6 +30,9 @@ But let's break it down a bit.
 
 - The `%matplotlib inline` code is a bit of jupyter notebook magic that displays graphs within the jn without having to call "plt.show()" each time.  (This also helps avoid plotting lines from different graphs in the same graphic.)
 >Similarly, `%config InlineBackend.figure_format = 'svg'` is telling jn to use the svg format for graphics (which, when exported, won't pixelate up on you when displayed in a web browser)
+
+
+- Oh uh I'm exporting this post from a jn
 
 
 - The semicolon at the end of the plt.plot call supresses jn from 'printing' the last line of the cell
