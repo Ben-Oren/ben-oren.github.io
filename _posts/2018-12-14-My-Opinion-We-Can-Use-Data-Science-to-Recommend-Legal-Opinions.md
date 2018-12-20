@@ -1,6 +1,4 @@
 
-# My Opinion: We Can Use Data Science to Recommend Legal Opinions
-
 ### The Set-Up
 
 Lawyers are people too (shocking, I know).  They make mistakes (even if they won't admit it).  And when they're searching for legal opinions to build arguments, the dominant tools to find those opinions are dependent on lawyers to adequately use them.  
